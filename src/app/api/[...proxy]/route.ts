@@ -1,6 +1,20 @@
+import initCors from "@/utils/cors";
 import { decrypt, encrypt } from "@/utils/encryption";
 
 export async function POST(request: Request) {
+  // ----------------------------------------------
+
+  // try {
+  //   // Run the cors middleware
+  //   await initCors(request, res);
+  //   // Your API route logic goes here
+  // } catch (error) {
+  //   console.error("CORS Error:", error);
+  //   return new Response("CORS Error", { status: 403 });
+  // }
+
+  // ----------------------------------------------
+
   const res = await request.json();
   const { encryptedData } = res;
 
